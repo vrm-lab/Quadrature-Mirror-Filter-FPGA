@@ -1,22 +1,60 @@
-### AL ###
-#Template for AL projects for Dynamics 365 Business Central
-#launch.json folder
-.vscode/
-#Cache folder
-.alcache/
-#Symbols folder
-.alpackages/
-#Snapshots folder
-.snapshots/
-#Testing Output folder
-.output/
-#Extension App-file
-*.app
-#Rapid Application Development File
-rad.json
-#Translation Base-file
-*.g.xlf
-#License-file
-*.flf
-#Test results file
-TestResults.xml
+# ============================================================
+# Simulation & waveform outputs
+# ============================================================
+*.vcd
+*.wlf
+*.fst
+*.ghw
+*.csv
+
+# ============================================================
+# Tool-generated directories
+# ============================================================
+.sim/
+.simulation/
+.xsim/
+.xcelium/
+.vivado/
+.vitis/
+.ip_user_files/
+.cache/
+.hw/
+.runs/
+
+# ============================================================
+# Vivado / Xilinx artifacts
+# ============================================================
+*.jou
+*.log
+*.str
+*.pb
+*.xml
+*.hdf
+*.xsa
+*.bit
+
+# ============================================================
+# OS / editor noise
+# ============================================================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# ============================================================
+# Python (if any local plotting scripts were used)
+# ============================================================
+__pycache__/
+*.pyc
+*.pyo
+.env
+.venv
+
+# ============================================================
+# Misc
+# ============================================================
+*.zip
+*.tar
+*.tar.gz
