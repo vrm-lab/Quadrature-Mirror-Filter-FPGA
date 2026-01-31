@@ -1,22 +1,24 @@
-## Integration
+## Integration Validation (QMF + Gain)
 
 This repository also includes an **integration-level validation**
-that combines multiple RTL building blocks into a single streaming pipeline:
+combining multiple RTL building blocks into a single streaming pipeline:
 
-QMF Analysis → Dual Gain → QMF Synthesis
+QMF Analysis → Dual Gain (Low / High) → QMF Synthesis
 
-The integration demonstrates that:
+The integration test demonstrates that:
 
-- QMF subbands can be independently processed in the frequency domain
-- Gain modules operate correctly inside a multi-stage AXI-Stream pipeline
-- Subband-domain processing is correctly reflected in the reconstructed output
-- AXI-Stream handshakes remain stable across chained modules
+- QMF subbands can be processed **independently** in the frequency domain
+- Gain modules operate correctly inside a **multi-stage AXI-Stream pipeline**
+- The reconstructed output reflects expected **subband gain behavior**
+- AXI-Stream handshakes remain stable with no deadlock or data loss
 
-Integration artifacts include:
+The `docs/integration` directory contains:
 
-- System-level architecture diagram
-- RTL testbench waveforms
-- CSV logs for offline inspection
+- a high-level architecture diagram
+- representative waveform captures from RTL simulation
 
-The integration is provided to **validate composability and correctness**.
-It is **not intended as a production reference design or performance benchmark**.
+This integration is provided **for functional validation only**.
+It does not aim to optimize audio quality or serve as a reusable system design.
+
+The focus remains on **RTL correctness, fixed-point discipline,
+and composability of DSP building blocks**.
